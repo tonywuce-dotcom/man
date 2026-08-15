@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的16個網頁_overflow</title>
+	<style>
+		.menu {
+			list-style: none;
+		}
+		.menu li{
+			display: inline-block;
+			text-align: center;
+			width: 100px;
+			margin: 1px;
+			border: 1px solid black;
+			white-space: nowrap;
+			overflow: hidden;
+			background-color: lightblue;
+		}
+		.menu li:hover{
+			background-color: lightcoral;
+
+		}
+		.menu2{
+			list-style-type: none;
+		}
+
+		.menu2 li{
+			text-align: center;
+			width: 100px;
+			padding: 10px 0;
+			border: 1px solid black;
+			white-space: hidden;
+			background-color: lightblue;
+		}
+
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS+Guides&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h2> css overflow</h2>
+	<ul class="menu">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+	<ul class="menu-h">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+	<ul class="menu">
+		<li class="menu-h li">Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+
+	<div class="ad1"></div>
+
+	<a href="index.htm">回首頁</a>
+</body>
+</html>
