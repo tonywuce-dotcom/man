@@ -3,12 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的08個網頁_css color</title>
+	<title>第08個網頁_CSS color</title>
 	<link rel="stylesheet" href="style.css">
 	<style> h1{color: blue;font-size: 12px}
 			h3{color: green;font-size: 10px}
+			/*CSS 樣式定義區*/
+			/*元素選擇器標籤名 { 顏色color: 使用顏色 blue; 
+			字型大小font-size: 數字像素 12px }*/
 	</style>
+	<!-- 連結外部定義CSS檔語法 -->
 	<!-- <link rel="stylesheet" href="style.css"> -->
+	<!-- rel="stylesheet"：設定連結的資源與目前網頁的關係是「樣式表」 -->
+	<!-- href="..."：填入 CSS 檔案的網址或相對路徑。 -->
 	
 </head>
 <body>
@@ -18,15 +24,15 @@
 	<h4>原本的h4標題</h4>
 
 	<h1 style="color :red ;font-size:12px;" >套用藍色12字css的h1標題</h1>
-	<!-- style 敘述越接近 強制套用本行,不用理表頭敘述-->
 	<h3 style="color :blue ;font-size:12px;" >套用藍色12字css的h3標題</h3>
+	<!-- style 敘述接近物件 強制套用本行,不用理表頭及外部樣式檔(xxx.css)敘述-->
 	
-	<h1>測試的h1CSS</h1>
-	<h3>測試的h3CSS</h3>
+	<h1>測試的h1CSS(套用 Style 定義區內 選擇器 h1 和 h2 不同)</h1>
+	<h3>測試的h3CSS(套用 Style 定義區內 選擇器 h3 和 h4 不同)</h3>
 
-	<p style="color: #00bfff">套用#00bff的色號</p>
+	<p style="color: #00bfff">套用16進位#00bff的色碼</p>
 	<p style="color: DarkSeaGreen">套用DarkSeaGreen的色名</p>
-	<p style="color: rgb(255,174,43)">套用(255,174,43)的色號</p>
+	<p style="color: rgb(255,174,43)">套用rgb(255,174,43)的色號</p>
 
 	<a href="index.htm">回首頁</a>
 	

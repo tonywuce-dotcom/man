@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>第14個網頁_CSS Menu</title>
+	<style>
+		.menu{
+			list-style-type: none;
+		}
+		.menu li{
+			display: inline-block;
+			/*
+			display 屬性用來決定元素的顯示類型與排版方式
+			
+			常見屬性與用法
+			display: block;佔滿整行，會自動換行。
+			可以設定寬度（width）與高度（height）。
+			常見標籤：<div>, <p>, <h1> 至 <h6>, <ul>, <li>。
+
+			display: inline;只佔內容的大小，不會自動換行。
+			無法設定寬度與高度，上下邊距（margin/padding）會失效或重疊。
+			常見標籤：<span>, <a>, <strong>, <em>。
+
+			display: inline-block;不會自動換行，像 inline 一樣並排。
+			同時可以設定寬度、高度與邊距，像 block 一樣。常
+			見用途：製作並排的按鈕、導覽列選單項目。
+
+			display: flex;啟動彈性盒排版（Flexbox）。
+			讓子元素能夠輕鬆進行水平或垂直對齊、間距分配與排序。
+			常見用途：單一方向（橫向或縱向）的複雜對齊與導覽列設計。
+
+			display: grid;啟動網格排版（Grid）。
+			同時控制行（Row）與列（Column）的雙向排版。
+			常見用途：整個網頁的大型架構、相簿或卡片陣列排版。
+
+			display: none;將元素完全隱藏，且不保留原本的版面空間。
+			與 visibility: hidden; 不同（hidden 會隱藏但保留空白佔位）。
+			*/
+			text-align: center;
+			width: 100px;
+			margin: 1px;
+			/*
+			margin（外邊距）是用來控制網頁元素外部與其他元素或邊界之間距離的屬性
+			基本方向屬性
+			你可以分開設定四個邊的外邊距：
+			margin-top：上方外邊距。
+			margin-right：右方外邊距。
+			margin-bottom：下方外邊距。
+			margin-left：左方外邊距。
+
+			簡寫語法（依順時針：上、右、下、左）
+			margin 屬性最多可以接受四個值：
+			1 個值：margin: 20px;（上下左右都是 20px）。
+			2 個值：margin: 10px 20px;（上下 10px，左右 20px）。
+			3 個值：margin: 10px 20px 30px;（上 10px，左右 20px，下 30px）。
+			4 個值：margin: 10px 20px 30px 40px;（依序為上、右、下、左）。
+			*/
+			border: 1px solid black;
+			white-space: normal;
+			/*
+			normal; 是瀏覽器的預設文字排版方式。它會合並連續的空白字符（如多个空格或换行符都變成一个空格），並在文字超出容器邊缘時自動換行。
+			多數情况是預設，可寫可不寫 
+			*/
+			overflow: hidden;
+			/*
+			overflow: hidden 用來處理元素内容超出容器大小時的顯示方式
+			常用屬性值
+			visible：預設值。內容會超出容器並完整顯示。
+			hidden：裁切並隱藏超出容器範圍的內容。
+			scroll：隱藏超出內容，並強制顯示捲軸。
+			auto：當內容超出容器時自動顯示捲軸，未超出則不顯示。
+			*/
+		}
+		
+	</style>
+</head>
+<body>
+	<h2> css List(改Menu)</h2>
+	<ul class="menu">
+		<li>Black Tea with Milk</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+
+	<a href="index.htm">回首頁</a>
+</body>
+</html>

@@ -3,20 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的10個網頁_CSS BOX Model</title>
+	<title>第10個網頁_CSS BOX Model</title>
 	<style>
 		.text-green {color: green;}
-		#header {background: lightcoral;
-				widows: 400px;
-				height: 60px;
+		/* 基本語法與寫法(.Class/# id)
+		（.）是用來建立與選取 Class（類別）選擇器的符號。
+			只要在名稱前加上點 . ，
+			就能指定所有帶有該 class 屬性的 HTML 元素並修改其樣式。
+			核心寫法
+			在 CSS 中，名稱前方加上一個點 . 。
+			可以(重複)套用到多個不同的 HTML 元素上。
+		----------------------------------------------------
+		   (#) 
+			HTML 端：標籤內設定 id="名稱"。
+			例:<div id="main-title">
+			CSS 端：使用 #名稱 來選取該元素。
+			例:#main-title
+			唯一性：一個網頁中，同一個 ID 名稱只能出現一次。
+			高權重：ID 選擇器的權重高於一般標籤與 Class。*/
+		#header {
+			background: lightcoral;
+			widows: 400px;
+			height: 60px;
 		}
-		#menu {background: lightblue;
-				width: 100px;
-				height: 200px;
-				float: left;
+
+		#menu {
+			background: lightblue;
+			/*
+			background-color: 色名;，
+			簡寫屬性 background: 色名;
+			*/
+			width: 100px;
+			height: 200px;
+			float: left;
+			/*float 屬性用來讓元素向左或向右浮動，
+					使文字或其他周圍元素環繞在它旁邊。
+			  基本語法為 
+			  float: left | right | none | inherit;，
+			  常用於圖片文繞圖或區塊左右排列。
+			  left：元素向左側浮動。
+			  right：元素向右側浮動。
+			  none：預設值，元素不浮動，按正常文件流排列。
+			  inherit：繼承父層的 float 屬性。
+			*/
 		}
 		#content {
-			background-color: lightcyan;
+			background: lightcyan;
 			width: 300px;
 			height: 200px;
 			float: left;
@@ -24,28 +56,56 @@
 		#ad1{
 			width: 100%;
 			height: 40px;
-
 		}
 		#news{
-			background-color: lightgreen;
+			background: lightgreen;
 			width:200px ;
 			height: 160px;
 			float: left;
 		}
 		#ad2{
-			background-color: lightpink;
+			background: lightpink;
 			width: 100PX;
 			height: 160px;
 			float: left;
 		}
 		#logo{
-			background-image: url(img/yahoo.png);
+			background-image: url("img/yahoo.png");
 			background-size: contain;
-			background-color:no-repeat;
+			/*
+			基礎語法
+			background-size: auto;，
+			代表保持背景圖片的原始寬度與高度，不會進行額外的縮放或變形。
+			常見設定值
+			auto：預設值。保持圖片原本的大小。
+
+			cover：等比例放大或縮小圖片，讓圖片完全填滿整個容器。圖片可能會被裁切。
+
+			contain：等比例放大或縮小圖片，讓圖片完整顯示在容器內。圖片不會被裁切，但容器可能會有空白。
+
+			寬度和高度數值：例如 background-size: 100px 50px;
+			（寬 100px，高 50px）。
+			若只寫一個值（如 100px），則第二個值預設為 auto。
+
+			百分比：例如 background-size: 50% 100%;，
+			根據父容器的寬高來計算圖片尺寸。
+			*/
+			background-repeat:no-repeat;
 			width: 120px;
 			height: 40px;
 			float: left;
 			margin: 10px;
+			/*margin（外邊界）屬性預設值為 0。
+					屬性值數量與對應方向一個值：
+					四個方向（上、右、下、左）全部相同。
+			語法：
+			margin: 20px;兩個值：
+			第一個值代表上下，
+			第二個值代表左右。語法：margin: 10px 20px;
+			  三個值：分別代表上、左右、下。語法：margin: 10px 20px 30px;
+			  四個值：依序為上、右、下、左（順時針）。
+			  語法：margin: 10px 20px 30px 40px;
+			*/
 		}
 		#city{
 			width: 100px;
@@ -63,7 +123,9 @@
 		<div id="city">台北市 28度</div>
 	</div>
 	<div class="text-green" id="menu">
+		<!-- 文字套用 class="text-green" ID套用id="menu"-->
 		<ul>
+			<!-- 用項目實做按鈕 -->
 			<li>新聞</li>
 			<li>股市</li>
 			<li>運動</li>
@@ -81,6 +143,13 @@
 		</div>
 		<div id="ad2">ad2</div>
 	</div>
+	<!-- 
+	clear 屬性用來控制區塊元素是否要避開前方的浮動 (float) 元素。
+	常用參數包含：
+	none：預設值。不清除浮動，左右兩側允許浮動物件存在。
+	left：清除左側浮動。物件會被往下推，不與左側浮動元素相鄰。
+	right：清除右側浮動。物件會被往下推，不與右側浮動元素相鄰。
+	both：清除左右兩側浮動。物件不與任何左右浮動元素相鄰。 -->
 	<div style="clear: both;"></div>
 
 	<a href="index.htm">回首頁</a>

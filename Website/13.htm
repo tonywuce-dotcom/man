@@ -3,38 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的13個網頁_CSS Lists</title>
+	<title>第13個網頁_CSS List</title>
 	<style>
-		ul{list-style: square;
-			/*list-style-image: url(img/user.gif);*/
-
+		.noicon{
+			list-style-type: none;
+		}
+		/*
+		list-style-type更改網頁清單（如 <ul> 或 <ol>）
+		常用符號（無序清單）
+		disc：實心圓點（預設值）
+		circle：空心圓圈
+		square：實心正方形
+		none：不顯示任何符號
+		*/
+		.user{
+			list-style-image: url("img/user.gif");
+		}
+		ul{
+			list-style: square;
 		}
 		ol{
 			list-style-type: upper-roman;
 		}
-		.noioon {
-			list-style: none;
-		}
-
-		.menu{
-			list-style-type: none;
-		}
-		.menu li{
-			display: inline-block;
-			text-align:center;
-			width: 100px;
-			margin: 1px;
-			border: 1px solid black;
-		}
+		/*
+		upper-roman; 用于将列表项目（<li>）
+		前面的标记设置为大写罗马数字（I、II、III、IV、V 等）
+		*/
 
 	</style>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
 	<h2> css List</h2>
-	<ul class="menu">
+	<ul class="noicon">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+
+	<ul class="user">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+	</ul>
+	<ul>
 		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>

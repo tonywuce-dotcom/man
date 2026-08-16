@@ -3,37 +3,69 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的08個網頁css background</title>
+	<title>第08個網頁css background</title>
 	<link rel="stylesheet" href="style.css">
-	<style> h1{color: blue;font-size: 12px}
+	<!-- 樣式套用順序 
+	引入方式與優先順序優先順序 (高 ➔ 低)名稱說明
+	1. 最高行內樣式 (Inline)直接寫在 HTML 標籤內
+	2. 中等內部樣式 (Internal)寫在 HTML 檔的 <style> 標籤內
+	3. 最低外部樣式 (External)用 <link> 連結獨立的 .css 檔案
+
+	當 <link rel="stylesheet"> 外部樣式與 <style> 內部樣式同時存在時，「寫在後面」的會覆蓋寫在前面的。
+	如果兩者權重相同，HTML 程式碼載入的先後順序決定了最終顯示的樣式。
+	-->
+	<style>
+			h1{color: blue;font-size: 12px}
 			h3{color: green;font-size: 10px}
+
 			body{
+				/*body 語法用來設定整個網頁的背景顏色、字體、邊距等基礎樣式。
+				基本寫法是選擇器 body 搭配大括號 {}，裡面放入屬性與數值。*/
 				background-color: lightblue;
+				/*設定背景顏色*/
 				background-image: url(img/yahoo.png);
+				/*設定背景yahoo圖片*/
 				background-repeat:no-repeat ;
+				/*用來設定背景圖片要不要重複，以及要怎麼重複。預設值是 repeat*/
+				/*no-repeat: 背景圖片不重複，只顯示一次。
+				  repeat-x: 只在水平方向（X軸）重複。
+				  repeat-y: 只在垂直方向（Y軸）重複。
+				  space: 圖片會自動調整間距重複顯示，不會被直接切掉。
+				  round: 圖片會自動縮放大小以完整填滿空間。*/
 				background-position: right bottom;
+				/*用來決定背景圖片在元素內的初始位置 bottom 為底*/
 				/* background-image: url(img/bg01.jpg);*/
 				background-attachment: fixed;
-
+				/*用來設定背景圖片是否隨著頁面或元素滾動*/
+				/*scroll：預設值。
+				  		  背景圖片相對於元素本身固定，
+				  		  當捲動頁面或元素時，背景會跟著一起移動。
+				  fixed： 背景圖片相對於瀏覽器視窗（viewport）固定。
+				  		  無論怎麼捲動畫面，背景都會停在原地不動。
+				  local： 背景圖片相對於元素的內容固定。
+				  		  如果該元素內部有卷軸（overflow），
+				  		  當內容滾動時，背景也會跟著滾動
+				  		 */
 			}
 	</style>
 	
 </head>
 <body>
 	<h2>CSS background</h2>
-
-	
 	<p style="color: white;background-color: navy;">套用navy色號的背景</p>
 	<p style="color: white;background-color: rgb(255, 174, 43);">套用rgb(255, 174, 43)的背景色號</p>
 	<p style="color: white;background-color: t=rgb(255, 174,43,0.3);">套用rgb(255, 174,43,0.3)的背景色號</p>
-	<div style="width:100% ; height:100px ;background-color: red;">用100%寬跟100px高的紅色背景div</div>
-	<div style="width:100% ; height:100px ;background-image: url(img/bg01.jpg);">用100%寬跟100px高的bg01.jpg背景</div>
-	<div style="width:100% ; height:64px ;background-image: url(img/yahoo.jpg);background-repeat:no-repeat ;"></div>
+
+	<div style="width:100% ; height:100px ;background-color: red;color: white;">套用100%寬跟100px高的紅色背景div</div>
+
+	<div style="width:100% ; height:100px ;background-image: url(img/bg01.jpg);color: white;">套用100%寬跟100px高的bg01.jpg背景div</div>
+
+	<div style="width:100% ; height:64px ;background-image: url(img/yahoo.png);background-repeat:no-repeat ;"></div>
+
 	<p>background-repeat:no-repeat</p>
 
-	
 
-	<a href="index.htm">回首頁</a>
+	<p><a href="index.htm">回首頁</a></p>
 	
 	
 </body>

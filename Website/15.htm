@@ -3,22 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的15個網頁_position</title>
+	<title>第15個網頁_position</title>
 	<style>
-		ul{list-style: square;
-			/*list-style-image: url(img/user.gif);*/
-
-		}
-		ol{
-			list-style-type: upper-roman;
-		}
-		.noioon {
-			list-style: none;
-		}
-
-		
 		.menu-h{
-			display: inline-block;
+			position: sticky;
 			top: 10;
 			background-color: white;
 			margin-bottom: 50px;
@@ -26,56 +14,105 @@
 
 		.menu-h li{
 			display: inline-block;
-
 		}
 
 		.menu{
 			list-style-type: none;
 		}
 		.menu li{
-			display: inline-block;
 			text-align:center;
 			width: 100px;
 			margin: 1px;
-			border: 1px solid black;
+			padding: 10px 0;
+			border: 1px solid lightgray;
+			border-left: 10px solid dashed;
+			/*
+			border-left 屬性用來設定元素左邊框的粗細、樣式與顏色。
+			基本語法為 border-left: [width] [style] [color];
+			*/
 		}
 		.ad1{
 			width: 300px;
 			height: 250px;
 			background-image: url(img/ad01.jpg);
-			position: absolute;
-			/*position: fixed;*/
+			position: fixed;
 			bottom: 10px;
 			right: 10px;
 		}
 
 	</style>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
 	<h2> css position</h2>
-	<ul class="menu">
+	<ul class="menu menu-h">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
 		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>
 		<li>Juice</li>
 		<li>Water</li>
 	</ul>
-	<ul class="menu-h">
+	<ul class="menu">
 		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>
 		<li>Juice</li>
 		<li>Water</li>
-	</ul>
-	<ul class="menu">
-		<li class="menu-h li">Coffee</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>
 		<li>Juice</li>
 		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+		<li>Water</li>
+		<li>Black Tea</li>
 	</ul>
 
 	<div class="ad1"></div>

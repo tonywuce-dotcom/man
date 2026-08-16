@@ -3,52 +3,104 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>我的17個網頁_Css Pseudo-classes</title>
+	<title>第17個網頁_Css Pseudo-classes</title>
 	<style>
-		div {
-			width: 500px;
-
+		.menu{
+			list-style-type: none;
 		}
-		.ad1{
-			width: 300px;
-			height: 250px;
-			background-image: url(img/ad01.jpg);
-			position: absolute;
-			/*position: fixed;*/
-			bottom: 10px;
-			right: 10px;
+		.menu li{
+			display: inline-block;
+			text-align: center;
+			width: 100px;
+			margin: 1px;
+			padding: 10px 0;
+			/*
+			padding（內邊距）用來設定元素內容與邊框之間的空間。
+			其簡寫語法可根據數值個數決定作用方向（順時針：上、右、下、左）；
+			也可以單獨設定單一方向。
+			*/
+			border: 1px solid black;
+			white-space: hidden;
+			background-color: lightblue;
+		} 
+
+		.menu li:hover{
+			/*
+			hover 語法用來設定當滑鼠游標停在元素上時的樣式。
+			基本寫法是在選擇器後面加上 :hover，例如 a:hover { color: red; }
+			*/
+			background-color: lightcoral;
+		}
+		.menu li{
+			display: inline-block;
+			text-align: center;
+			width: 100px;
+			margin: 1px;
+			padding: 10px 0;
+			border: 1px solid black;
+			white-space: nowrap;
+			overflow: hidden;
+			background-color: lightblue;
+		}
+		.menu li:hover{
+			background-color: lightcoral;
 		}
 
+		.menu2{
+			list-style-type: none;
+			width: 100px;
+			margin: 0;
+			padding: 0;
+			border: 1px solid black;
+		}
+		.menu2 li{
+			text-align: center;
+			width: 100px;
+			padding: 10x 0;
+			border-bottom: 1px solid black;
+			white-space: nowrap;
+			overflow: hidden;
+			background-color: ;
+			cursor: pointer;
+			/*
+			cursor 屬性用來改變滑鼠游標移到元素上方時的形狀。
+			基本語法為 
+			cursor: 屬性值; 或使用自訂圖片 
+			cursor: url(圖片路徑), 備用屬性;。
+			*/
+		}
+		.menu2 li:last-child{
+			/*
+			li:last-child 用來選取父元素（如 ul 或 ol）
+			裡面的最後一個 li 子元素。
+			*/
+			border-bottom: none;
+		}
+		.menu2 li:hover{
+			color: white;
+			background-color: gray;
+		}
 	</style>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
 	<h2> css Pseudo-classes</h2>
 	<ul class="menu">
+		<li>Black Tea with Milk</li>
 		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>
 		<li>Juice</li>
 		<li>Water</li>
 	</ul>
-	<ul class="menu-h">
+	<ul class="menu2">
+		<li>Black Tea with Milk</li>
 		<li>Coffee</li>
 		<li>Tea</li>
 		<li>Milk</li>
 		<li>Juice</li>
 		<li>Water</li>
+		<li>Black Tea with Milk</li>
 	</ul>
-	<ul class="menu">
-		<li class="menu-h li">Coffee</li>
-		<li>Tea</li>
-		<li>Milk</li>
-		<li>Juice</li>
-		<li>Water</li>
-	</ul>
-
-	<div class="ad1"></div>
 
 	<a href="index.htm">回首頁</a>
 </body>
