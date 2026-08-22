@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清爽設計 - 網路圖片範例</title>
+    
+    <!-- 本地端 Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">PURE VISION</a>
+        </div>
+    </nav>
+
+    <!-- 自動輪播 Slider (Crossfade) -->
+    <header id="networkSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#networkSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#networkSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#networkSlider" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <!-- Slide 1: 自然風景 -->
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 slider-img" alt="Nature">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-5 fw-bold">擁抱自然</h2>
+                    <p class="lead">使用網路圖片資源，讓您的原型設計更具說服力。</p>
+                </div>
+            </div>
+            <!-- Slide 2: 極簡建築 -->
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 slider-img" alt="Minimal">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-5 fw-bold">極簡空間</h2>
+                    <p class="lead">透過 Crossfade 淡入淡出，展現優雅的視覺轉場。</p>
+                </div>
+            </div>
+            <!-- Slide 3: 寧靜海洋 -->
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1439405326854-014607f694d7?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 slider-img" alt="Ocean">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-5 fw-bold">無限視野</h2>
+                    <p class="lead">無論圖片來源為何，響應式佈局都能完美適應。</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 下方三張 Card 區塊 -->
+    <main class="container py-5">
+        <div class="row g-4">
+            <!-- 卡片 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Card 1">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">數位生活</h5>
+                        <p class="text-secondary small">淺顯易懂的內文解釋，幫助使用者快速掌握網頁核心價值。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Card 2">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">高效工作</h5>
+                        <p class="text-secondary small">利用 Bootstrap 5 內建的 Utility Classes，減少冗餘代碼。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Card 3">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">專業空間</h5>
+                        <p class="text-secondary small">純原生 JavaScript 驅動，不依賴龐大框架，載入無負擔。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 本地端 JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <a href="index.htm">回首頁</a>
+</body>
+</html>

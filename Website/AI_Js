@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 初始化 Bootstrap 輪播切換速度 (例如 5秒換一張)
+    const myCarousel = document.querySelector('#heroSlider');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        wrap: true
+    });
+
+    console.log("Slider 與卡片區塊已載入完成。");
+});

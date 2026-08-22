@@ -1,0 +1,36 @@
+/* 全域設定 */
+body {
+    background-color: #f9fbfc;
+    font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #444;
+}
+
+/* Slider 圖片高度限制與裁切 */
+.main-slider-img {
+    height: 500px;
+    object-fit: cover; /* 確保圖片縮放時不會變形 */
+    filter: brightness(0.85); /* 讓圖片稍微變暗，讓上方的文字更清楚 */
+}
+
+/* 卡片設計 */
+.custom-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden; /* 確保圖片也會跟著圓角裁切 */
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 下方卡片標題樣式 */
+.card-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}

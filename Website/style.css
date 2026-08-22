@@ -1,2 +1,84 @@
 h1{color: blue;font-size: 12px;}
 h3{color: blue;font-size: 10px;}
+
+/*AI Support*/
+/* 基礎設定 */
+body {
+    background-color: #ffffff;
+    font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #2d3436;
+}
+
+/* 標題裝飾線 */
+.title-line {
+    width: 60px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin: 15px auto 0;
+}
+
+/* Slider 設定 */
+.slider-img {
+    height: 60vh; /* 手機版不宜過高 */
+    min-height: 400px;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 2rem;
+    bottom: 30%;
+}
+
+/* 服務卡片：核心上拉效果 */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    top: 0; /* 用於動畫基準點 */
+}
+
+.service-card:hover {
+    transform: translateY(-15px); /* 上拉 15px */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    background: #f8fbff;
+}
+
+/* 圖標容器樣式 */
+.icon-wrapper {
+    color: #0d6efd;
+    width: 70px;
+    height: 70px;
+    line-height: 75px;
+    background: #eef4ff;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.service-card:hover .icon-wrapper {
+    background: #0d6efd;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* 聯絡資訊 */
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+    .slider-img {
+        height: 50vh;
+    }
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+    .service-card {
+        margin-bottom: 10px;
+    }
+}

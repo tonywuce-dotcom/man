@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業服務 - 響應式清爽設計</title>
+    
+    <!-- 1. 本地 Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 2. FontAwesome Free (圖標庫) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 3. 自定義樣式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#"><i class="fas fa-gem me-2"></i>專業空間設計</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#services">服務項目</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contact">聯絡我們</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 上方 Slider (Crossfade 自動輪播) -->
+    <header id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://picsum.photos/id/122/1600/700" class="d-block w-100 slider-img" alt="Slider 1">
+                <div class="carousel-caption">
+                    <h2 class="display-4 fw-bold">現代美學空間</h2>
+                    <p class="lead">用設計，為您的生活注入靈魂。</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://picsum.photos/id/180/1600/700" class="d-block w-100 slider-img" alt="Slider 2">
+                <div class="carousel-caption">
+                    <h2 class="display-4 fw-bold">直覺功能佈局</h2>
+                    <p class="lead">每一寸空間，都具備其獨特的價值。</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 下方服務項目 (上拉風格卡片) -->
+    <section id="services" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">專業服務項目</h2>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- 服務卡片 1 -->
+            <div class="col-md-4 col-sm-12">
+                <div class="card h-100 service-card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <div class="icon-wrapper mb-4">
+                            <i class="fas fa-pencil-ruler fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">空間規劃</h4>
+                        <p class="text-secondary mb-0">針對您的基地條件，提供最科學的動線與空間配置，讓居住更直覺。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 服務卡片 2 -->
+            <div class="col-md-4 col-sm-12">
+                <div class="card h-100 service-card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <div class="icon-wrapper mb-4">
+                            <i class="fas fa-couch fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">軟裝佈置</h4>
+                        <p class="text-secondary mb-0">精選全球家具品牌，搭配獨特色彩學，打造專屬於您的風格調性。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 服務卡片 3 -->
+            <div class="col-md-4 col-sm-12">
+                <div class="card h-100 service-card border-0 shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <div class="icon-wrapper mb-4">
+                            <i class="fas fa-tools fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">工程監造</h4>
+                        <p class="text-secondary mb-0">嚴格掌控材料品質與施工進度，確保設計藍圖完美落實在現實中。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們與 Google Map -->
+    <!-- 聯絡我們與 Google Map -->
+<section id="contact" class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4">聯絡我們</h2>
+                <div class="contact-info">
+                    <p class="mb-3">
+                        <i class="fas fa-map-marker-alt text-primary me-2"></i> 
+                        <strong>公司地址：</strong><br>
+                        <span class="ms-4">106臺北市大安區龍安里和平東路一段179號</span>
+                    </p>
+                    <p class="mb-3">
+                        <i class="fas fa-phone text-primary me-2"></i> 
+                        <strong>聯絡電話：</strong><br>
+                        <span class="ms-4">(02) 1234-5678</span>
+                    </p>
+                    <p class="mb-3">
+                        <i class="fas fa-envelope text-primary me-2"></i> 
+                        <strong>電子郵件：</strong><br>
+                        <span class="ms-4">service@example.com</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <!-- 響應式地圖容器 -->
+                <!-- 使用 ratio-16x9 確保地圖在不同螢幕下比例正確 -->
+                <div class="ratio ratio-16x9 shadow-sm rounded-4 overflow-hidden border">
+                    <iframe 
+                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2227644887435!2d121.53036647483194!3d25.026513138593913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a986ed7cf651%3A0xc0fd7c864a133d0!2zMTA2NDToh7rljJfluILlpKflronljYDpvo3lronph4zlkozlubPmnbHot6_kuIDmrrUxNznomZ8!5e0!3m2!1szh-TW!2stw!4v1787385478720!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="text-end mt-2">
+                    <small class="text-muted">※ 地圖可使用滑鼠滾輪或雙指縮放</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="py-4 text-center text-secondary border-top">
+        <small>&copy; 2023 專業空間設計. All Rights Reserved.</small>
+    </footer>
+
+    <!-- 本地 Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <a href="index.htm">回首頁</a>
+</body>
+</html>
