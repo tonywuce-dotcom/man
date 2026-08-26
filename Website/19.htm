@@ -39,9 +39,9 @@
 	<button onclick="document.getElementById('bul').src =' img/pic_bulboff.gif'">turn off</button>
 	<br><br><br>
 	<hr>
-	<p id = '3'>this is a HTML content3</p>
+	<p id = 'p3'>this is a HTML content3</p>
 	<button onclick="document.getElementById('p3').style=''">reset</button>
-	<button onclick="document.getElementById('p3').style.fonSize='30px'">css.fonSize</button>
+	<button onclick="document.getElementById('p3').style.fontSize='30px'">css.fonSize</button>
 	<button onclick="document.getElementById('p3').style.color='red'">css.color</button>
 	
 	<br><br><br><hr>
@@ -62,22 +62,20 @@
 
 	<br><br><br><hr>
 	<script>
-		function numreset(){
+		function numberreset(){
 			document.getElementById("p5").innerHTML="this is a HTML content 5";
 		}
 		function numberloop(){
-			let text ""
+			let text =""
 			for(i=1; i<=10; i++){
 				text += "The number is "+i+ "<br>";
 			}
 			document.getElementById("p5").innerHTML=text;
 		}
 	</script>
-	<p id='p5'> this is a HTML content 5</p>
-	<button onclick="numberrest()">number reset</button>
+	<p id="p5"> this is a HTML content 5</p>
+	<button onclick="numberreset()">number reset</button>
 	<button onclick="numberloop()">number count</button>
-
-	<!-- <button onclick="document.getElementById('bul').width='200px'">turn off</button> -->
 
 	<a href="index.htm">回首頁</a>
 </body>
