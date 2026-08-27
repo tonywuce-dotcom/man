@@ -13,6 +13,11 @@
 	<p id="p2">this is a HTML content 2</p>
 
 	<button onclick="document.getElementById('p1').innerHTML ='Happy Birthday!!' ">Click me to change conntent 1</button>
+	<!-- onclick="..."：HTML 的事件屬性（Event Attribute）。HTML 規範了這個屬性，用來監聽使用者的點擊動作。
+	 	JavaScript 部份
+	    getElementById('p1')：取得元素(件)。用來在網頁中找出一個屬性 id 等於 'p1' 的獨特元素（例如某個段落 <p id="p1"> 或標題）
+		.innerHTML : 網頁碼/內文 ＝ 設定為 Happy Birthday!!
+	-->
 
 	<button onclick="document.getElementById('p1').innerHTML ='This is a HTML content 1'">Click me to recover conntent 1</button>
 
@@ -22,13 +27,21 @@
 
 	<hr>
 	<br><br><br>
-	<button onclick="document.write('this is a new page!!'">document.Write</button>
+	<button onclick="document.write('this is a new page!!')">document.Write</button>
+	<!-- 
+		document.write 會清空 html 內的元件 並在印出 字串 this is a new page!!
+		使用上要特別注意會清空元件的特性,適合用在做 初始資料輸出 比較不容易出問題
+	-->
 	<br><br><br>
 	<hr>
 	
 	<button onclick="window.alert('This is alert message!!')">Windoows.alert</button>
+	<!--window.alert 彈出「警告視窗」（對話框）-->
 	<br><br><br><hr>
 	<button onclick="console.log('This is console log')">console.log</button>
+	<!-- console.log() 是 JavaScript 中最常用來在瀏覽器主控台（Console）環境中輸出資訊、偵錯（Debug）和檢查變數的函式。
+		在 Chrome 內 使用 熱鍵 F12 在 console 中可以觀察 變化
+	-->
 	<br>
 	<br>
 	<hr>
@@ -37,15 +50,19 @@
 	<br>
 	<button onclick="document.getElementById('bul').src =' img/pic_bulbon.gif'">turn on</button>
 	<button onclick="document.getElementById('bul').src =' img/pic_bulboff.gif'">turn off</button>
+	<!-- 用同一id容器 切換不同照片以表達燈泡開關-->
 	<br><br><br>
 	<hr>
 	<p id = 'p3'>this is a HTML content3</p>
 	<button onclick="document.getElementById('p3').style=''">reset</button>
 	<button onclick="document.getElementById('p3').style.fontSize='30px'">css.fonSize</button>
 	<button onclick="document.getElementById('p3').style.color='red'">css.color</button>
+	<!-- .style套用 css 預設值,.fontSize 改字型大小,.color 改字體顏色-->
 	
 	<br><br><br><hr>
 	<script>
+		// 此開頭執行 java script 程式碼
+		// function 函數
 		function goodday() {
 			hour = new Date().getHours();
 			if (hour<18){
@@ -53,29 +70,45 @@
 			} else {
 				gretting = "goodnight"
 			}
+			//hour 值小於 18 good day 大於 goodnight 並放入 gretting 並把字串放入 p4 網頁元件內
 			document.getElementById("p4").innerHTML=gretting
+			//1. new Date() (建立時間物件)解釋：這會在 JavaScript 中實例化一個全新的 Date 物件。
+			//動作：當括號內沒有填入任何參數時，它會直接抓取使用者瀏覽器或伺服器當下的本地日期與時間。
+			//2. .getHours() (呼叫取得小時的方法)解釋：這是 MDN Web Docs 內建的 Date 函數方法。
+			//動作：它會從前一步抓到的完整時間中，單獨把「小時」的部分抽出來。
+			//回傳值：採用 24小時制（回傳 0 代表午夜 12 點，13 代表下午 1 點，最高到 23）。
+			//3. hour = ... (賦值)解釋：將右邊算出來的小時數字，儲存到名為 hour 的變數中，
+			//方便你後續在程式碼裡使用（註：實務上建議在前面加上 let 或 const 宣告，例如 const hour = new Date().getHours();）。
 
   	}
 	</script>
 	<p id='p4'> this is a HTML content 4</p>
 	<button onclick="goodday()">hello</button>
+	<!-- button 將執行 java scriptso內函數 goodday()  -->
 
 	<br><br><br><hr>
 	<script>
 		function numberreset(){
+			//重置用函數
 			document.getElementById("p5").innerHTML="this is a HTML content 5";
 		}
 		function numberloop(){
+			//執行數字累加 函數
 			let text =""
+			//text 變數 預設歸零
 			for(i=1; i<=10; i++){
+				//i 做計數 初始為1 最大10,累加1.結果顯示1加到10 過程
 				text += "The number is "+i+ "<br>";
 			}
 			document.getElementById("p5").innerHTML=text;
+			//顯示最後一次 text 內的值
 		}
 	</script>
 	<p id="p5"> this is a HTML content 5</p>
 	<button onclick="numberreset()">number reset</button>
+	<!-- 呼叫 函數 numberreset()-->
 	<button onclick="numberloop()">number count</button>
+	<!-- 呼叫 函數 numberloop()-->
 
 	<a href="index.htm">回首頁</a>
 </body>
