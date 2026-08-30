@@ -19,11 +19,55 @@
 <body>
 
 <div class="container-fluid bg-primary text-light">container-fluid</div>
-<div class="container bg-success text-light">container-sm</div> 
+    <!--
+    參考getbootstrap.com/docs/5.3/layout/containers/ 
+    Fluid containers 
+    ----------------------
+    container-fluid 
+    100% 寬度：無論使用者的螢幕或視窗（Viewport）有多寬，
+    .container-fluid 的寬度永遠是 100%，會橫跨整個可視區域。
+    ----------------------
+    bg-primary ,text-light
+    參考 
+    https://getbootstrap.com/docs/5.3/customize/color/
+    https://getbootstrap.com/docs/5.3/utilities/colors/
+    -->
+<div class="container bg-success text-light">container(-sm)</div> 
+    <!--
+    .container 
+    是網頁框架中最基本的版面佈局元素，
+    用於將網頁內容包裹在內、提供左右留白（padding）並讓內容自動置中
+    container 和 container-sm 效果幾乎相同
+    參考
+    https://getbootstrap.com/docs/5.3/layout/containers/
+    bg-success 參考
+    https://getbootstrap.com/docs/5.3/utilities/background/
+    -->
 <div class="container-md bg-danger text-light">container-md</div>
+    <!--
+    .container-md
+    在螢幕寬度達到中斷點 md（768px）之前，
+    寬度保持 100%；超過 md 之後則會固定最大寬度（max-width）。
+    -->
 <div class="container-lg bg-secondary text-light">container-lg</div> 
+    <!--
+    container-lg
+    用於將網頁內容水平置中、限制最大寬度(斷點寬度992px)
+    ，並隨著螢幕尺寸自動調整
+    -->
 
 <div id="carouselExample" class="carousel slide d-none d-lg-block my-3">
+    <!--
+    carousel(輪播-自動輪播)
+    參考範例
+    https://getbootstrap.com/docs/5.3/components/carousel/
+    slide d-none d-lg-block 參考(注意Screen size)
+    my-3 參考
+    https://getbootstrap.com/docs/5.3/utilities/spacing/
+    m：代表 Margin（外距），控制元素周圍的外部空間。
+    y：代表 Y 軸（垂直方向），同時設定頂部（Top）與底部（Bottom）。
+    3：代表 間距層級，對應到 Bootstrap 的預設間距縮放比例。
+    -->
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://placehold.co/1200x300" class="d-block w-100" alt="...">
