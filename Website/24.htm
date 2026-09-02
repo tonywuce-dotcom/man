@@ -84,8 +84,20 @@
         .carousel-item 上時，該項目才會變成顯示狀態（display: block 或配合 CSS 動畫呈現）。
         -->
       <img src="https://placehold.co/1200x300" class="d-block w-100" alt="...">
+        <!--
+        d-block：代表 display: block;。
+        它會把元素強制轉為區塊元素，讓元素獨佔一整行，
+        並支援設定寬高、上下邊距等特性（圖片 <img> 預設是行內元素 inline，
+        常透過此屬性清除預設對齊的空白間隙）。
+        w-100：代表 width: 100%;。它會將元素的寬度設為佔滿父容器的 100%。
+        -->
     </div>
     <div class="carousel-item">
+        <!--
+        代表單一的一張幻燈片（內容區塊）
+        每一個 .carousel-item 裡面可以放置圖片（<img>）、
+        文字（<h5>、<p>）或任何自訂的 HTML 標籤。
+        -->
       <img src="https://placehold.co/1200x300" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
@@ -93,16 +105,49 @@
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <!--
+      carousel-control-prev
+      將這個按鈕變成「左側/上一張」的輪播控制按鈕，並自動調整其定位與外觀。
+      data-bs-target="#carouselExample"
+      JavaScript 屬性，用來指定這個按鈕要控制哪一個輪播容器（對應到頁面中 id="carouselExample" 的元素）。
+      data-bs-slide="prev"
+      JavaScript 屬性，告訴輪播元件當按鈕被點擊時，要切換到「上一張（previous）」投影片。
+      -->
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!--
+      span：一個行內標籤，用來包覆並顯示圖示。
+      class="carousel-control-prev-icon"：Bootstrap 的內建樣式類別（Class），
+      會自動載入一個「向左（上一張）」的箭頭圖示背景。
+      aria-hidden="true"：無障礙網頁（Accessibility, a11y）屬性，
+      告訴螢幕閱讀器（給視障者使用的工具）忽略這個圖示，避免重複唸出或產生干擾。
+      -->
     <span class="visually-hidden">Previous</span>
+      <!--
+      class="visually-hidden"
+      視覺隱藏：一般使用者在網頁畫面上看不見這個元素（就像設定了 display: none 或 visibility: hidden 一樣，但運作方式不同）。
+      無障礙支援：視障或盲人使用者透過螢幕閱讀器瀏覽網頁時，依然可以聽見並取得這個元素的文字內容。
+      -->
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <!--
+      data-bs-slide="next" 是 Bootstrap 輪播元件（Carousel）的自訂屬性，用來控制輪播圖切
+      作用：當使用者點擊帶有這個屬性的按鈕或連結時，Bootstrap 的 JavaScript 會自動把當前顯示的幻燈片（Slide）切換到下一張。
+      參數值：next 代表向後切換下一張；若改用 prev 則是向前切換上一張。
+      版本差異：
+      在 Bootstrap 4 中寫作 data-slide="next"，
+      到了 Bootstrap 5 則加入 -bs 命名空間變成 data-bs-slide="next"，避免與其他程式庫衝突。
+      -->
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
 
-<!-- <br> 可替換改用 bootstrap 微調-->
+    <!-- 
+        <br> 可替換改用 bootstrap 微調
+        1. 使用 d-none d-md-inline 
+        2. 使用 d-block d-md-inline 處理外層標籤
+        3. 強制完全不換行：text-nowrap
+    -->
     <div id class="container">
         <div class="row">
             <div class="card col-md mx-3 my-1">
