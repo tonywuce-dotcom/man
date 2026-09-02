@@ -151,11 +151,37 @@
     <div id class="container">
         <div class="row">
             <div class="card col-md mx-3 my-1">
+                <!--
+                🧱 基礎元件card功能：建立一個卡片元件。
+                    效果：會自動加上白色背景、圓角、灰色細邊框以及適度的內襯（Padding），
+                    常用來包裝獨立的內容區塊。
+                📐 網格佈局col-md功能：中等螢幕以上的彈性欄位。
+                    效果：在平板與桌機（螢幕寬度 ≥ 768px）環境下，
+                    該欄位會與其他同層級的 col 欄位平均分配可用寬度；
+                    在手機等小螢幕（< 768px）環境下，則會自動變成單行全寬（100%）呈現。
+                ↔️ 外邊距（Margin）mx-3功能：設定水平（左右）外邊距。
+                    效果：左右兩側加上 3 等級的間距（在 Bootstrap 預設中為 1rem，即 16px）。
+                    my-1功能：設定垂直（上下）外邊距。
+                    效果：上下兩側加上 1 等級的間距（在 Bootstrap 預設中為 0.25rem，即 4px）。
+                -->
                 <img src="https://placehold.co/600x400" class="card-img-top" alt="...">
+                <!--  
+                alt="..."替代文字屬性。當圖片載入失敗時，
+                網頁會顯示此文字。幫助視障人士的螢幕閱讀器理解圖片內容。
+                目前填寫 ... 代表正式開發時需要替換為實際的圖片描述。
+                -->
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <!--
+                    href="#"：超連結的目標網址。這裡的 # 是預留填空符號（錨點），
+                        代表目前點擊後不會跳轉到其他頁面，通常在開發初期或寫範例時使用。
+                    btn：Bootstrap 的基礎按鈕樣式，負責提供按鈕的內距（padding）、
+                        圓角、字體大小以及滑鼠懸停（hover）時的基礎動畫效果。
+                    btn-primary：Bootstrap 的顏色主題類別，
+                        負責將按鈕填滿主要控制顏色（在預設的 Bootstrap 樣式中是藍色）。
+                    -->
                 </div>
             </div>
             <div class="card col-md mx-3 my-1">
