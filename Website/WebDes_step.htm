@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁設計步驟</title>
+    
+</head>
+<body>
+
+    <p>
+<h2>一、 各工具功能詳述</h2>
+<br>
+<h3>1. Figma (UI/UX 設計與原型平台)</h3>
+<br>
+    核心功能： 雲端介面設計工具，用於繪製網頁與 App 的 UI 畫面。
+    <br>
+     [1] (https://www.bnext.com.tw/article/85027/figma), 
+     [2] (https://ithelp.ithome.com.tw/articles/10319713)
+<br>
+    重點 Feature：
+    <br>
+        Auto Layout & 組件庫： 快速建立響應式佈局與可重複使用的 UI 組件。<br>
+        Figma AI (如 Figma Make)： 可透過 Prompt（提示詞）直接生成可互動的 UI 原型與初稿。<br>
+        Dev Mode / MCP： 開發者模式能讓工程師直接查看 CSS/前端樣式，或透過 MCP (Model Context Protocol) 讓外部 AI 編碼工具（如 Cursor、Claude Code）直接讀取設計稿生成程式碼。<br>
+        [1] (https://frankknow.com/figma-ai/), 
+        <br>
+        [2] (https://www.51zxw.net/TechArticleDetails.aspx?zid=8&id=915), 
+        <br>
+        [3] (https://www.ozchamp.com/insights/figma-to-code-ai-handoff)
+        <br>
+<h3>2. AI Studio (Google AI Studio / AI 模型與 Prompt 實驗室)</h3><br>
+    核心功能： 這是開發人員用來測試、調整和獲取大語言模型（如 Gemini 系列）API <br>金鑰的後台環境（若指的是 Figma 內的 AI Design Studio 插件，則是將設計稿一鍵轉碼的 AI <br>助手）。以下以 Google AI Studio 為主要定位說明： <br>
+        [1] (https://www.figma.com/community/plugin/1617823044592110123/ai-design-studio)<br>
+    重點 Feature：<br>
+        Prompt 測試與微調： 在寫程式前，先在這裡測試你的 AI 提示詞、調整 Temperature（溫度）和 System Instructions（系統指令）。<br>
+        獲取 API Key： 取得串接 AI 功能所需的金鑰，並可直接導出 Python、JavaScript 或 cURL 程式碼，方便後續寫入專案中。
+        <br>
+<h3>3. GitHub (程式碼代管與版本控制平台)</h3><br>
+    核心功能： 基於 Git 的程式碼倉庫，負責管理專案的所有程式碼、版本紀錄與團隊協作。<br>
+    重點 Feature：<br>
+        版本控制 (Git)： 紀錄每次程式碼的修改（Commit），防止寫爛程式碼時無法還原。<br>
+        分支管理 (Branches) & PR： 團隊協作時，各自在不同分支開發功能，確認沒問題後再發起<br> Pull Request (PR) 合併到主分支（main）。<br>
+<h3>4. Vercel (前端自動化部署與雲端託管平台)</h3><br>
+    核心功能：<br>專為前端框架（如Next.js、React、Vue）設計的部署平台，能將程式碼轉化為全球可訪問的真實網站。
+    <br>
+    重點 Feature：<br>
+        Git 整合自動部署 (CI/CD)： 只要 GitHub 的程式碼有更新（Push），Vercel <br>就會自動抓取並重新編譯網站，幾秒鐘內完成線上更新。<br>
+        Preview 預覽功能： 每當你在 GitHub 開立 PR，Vercel <br>會自動生成一個獨立的預覽網址，供團隊測試未上線的功能。<br>
+        環境變數管理： 安全地存放從 AI Studio 拿到的 API 金鑰，不暴露在公開的程式碼中。
+        <br>
+<h3>二、 現代化開發的標準使用順序</h3><br>
+在實際開發一款應用（例如：一個串接 AI 的智慧儀表板）時，這四個工具的最佳協作順序如下：<br>
+<h4>Step 1: Figma  ──>  Step 2: AI Studio  ──>  Step 3: GitHub  ──>  Step 4: Vercel</h4><br>
+ <h4>(視覺與原型)        (AI 邏輯與 API 測試)      (程式碼管理與編寫)     (一鍵部署上線)</h4><br>
+
+<h4>Step 1：在 Figma 中進行視覺設計與原型規劃</h4><br>
+動作： 設計師（或 PM/工程師）利用 Figma 畫出網頁的 Layout、欄位與按鈕。<br>
+AI 輔助： 可使用 Figma Make 用文字描述快速生成 UI 初稿，再進入 Dev Mode<br> 準備將設計轉為程式碼結構。<br> 
+    [1] (https://ithelp.ithome.com.tw/articles/10319713), <br>
+    [2] (https://frankknow.com/figma-ai/)<br>
+<h4>Step 2：在 AI Studio 中調試 AI 核心邏輯</h4><br>
+    動作： 前往 Google AI Studio 測試你網頁背後要運行的 AI 功能（例如：測試如何讓 AI 完美總結用戶輸入的資料）。<br>
+    產出： 確認 Prompt 效果滿意後，複製產出的 API 程式碼片段並建立 API Key，留待下一步寫入專案。<br>
+<h4>Step 3：在本地編寫程式碼並推送到 GitHub</h4><br>
+    動作：<br>
+    1.在本地（如 VS Code）建立前端專案（如 Next.js 專案），將 Figma 的<br>
+        UI樣式寫成程式碼，並將 AI Studio 的 API 串接進去。<br>
+    2.在本地初始化 Git 倉庫，並在 GitHub 上建立一個新的儲存庫（Repository）。<br>
+    3.使用 git push 將專案程式碼推送到 GitHub 主分支（main）。<br>
+<h4>Step 4：將 GitHub 連動 Vercel 進行自動化部署</h4><br>
+    動作：<br>
+    1.登入 Vercel，點擊 "Add New Project" 並匯入剛才的 GitHub 儲存庫。<br>
+    2.在 Vercel 的設定中，將 Step 2 獲得的 AI API Key 填入「Environment <br>Variables（環境變數）」中以確保安全。<br>
+    3.點擊 Deploy。Vercel 會在 1~2 分鐘內給你一個正式的網址（如 your-project.vercel.app）。
+    <br>
+<h3>後續迭代循環：</h3><br>
+當你需要修改網頁時，流程會簡化為：
+<br>
+    在 Figma 微調設計 → 在本地修改程式碼 → git push 到 GitHub → Vercel 偵測到 GitHub 更新，自動在背景重新部署網站，用戶重整網頁即可看到最新版本。 <br>   
+
+    </p>
+
+
+    <a href="index.htm">回首頁</a>
+</body>
+</html>

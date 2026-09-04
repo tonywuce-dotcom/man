@@ -1,0 +1,26 @@
+步驟一：使用 GitHub 帳號登入 Vercel
+1.	前往 Vercel 官網。
+2.	點擊 Sign Up 或 Log In，建議直接選擇 Continue with GitHub。
+3.	授權 Vercel 存取你的 GitHub 帳號與儲存庫。 [1, 2]
+步驟二：匯入 GitHub 專案
+1.	登入 Vercel 後，在你的 Dashboard（儀表板）點擊右上角的 Add New... 按鈕。
+2.	選擇 Project。
+3.	在 Import Git Repository 列表中，找到你想同步的 GitHub 專案，點擊右側的 Import。
+o	(如果沒看到專案，可以點擊下方調整 GitHub App 的權限，授權 Vercel 讀取特定的 Repository)。
+步驟三：設定與部署
+1.	Configure Project（設定專案）：
+o	Project Name：設定你的專案名稱。
+o	Framework Preset：Vercel 會自動偵測你的前端框架（如 Next.js、Vite、React 等），通常保持預設即可。
+o	Root Directory：如果你的專案在子資料夾，可以在此修改。
+o	Environment Variables：如果專案需要金鑰或環境變數，可以在此展開新增。 [1, 2]
+2.	設定完成後，點擊 Deploy。
+3.	等待大約一分鐘，部署完成後就會獲得一個線上預覽網址
+
+之後如何自動同步更新？
+主分支（通常是 main 或 master）：每當你把新的程式碼 git push 到 GitHub 的這個分支時，Vercel 就會自動觸發正式部署（Production Deployment）。 
+[1] (https://zhuanlan.zhihu.com/p/682730026), 
+[2] (https://ultralab.tw/blog/github-vercel-auto-deploy-beginner)
+其他分支或 Pull Request：如果你推送到其他分支或發起 PR，Vercel 會自動生成一個預覽網址（Preview URL）讓你測試，不會直接覆蓋生產環境。
+ [1] (https://vercel.com/kb/guide/how-can-i-use-github-actions-with-vercel)
+
+

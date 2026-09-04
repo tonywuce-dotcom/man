@@ -1,0 +1,27 @@
+ 
+
+AI Studio 與 GitHub 雙向同步步驟
+
+1.開啟專案應用程式：在 Google AI Studio 的 Build 模式中打開您要同步的 App。
+
+[1] (https://aistudio.google.com/learn/sync-your-ai-studio-apps-with-github)
+
+2.進入 GitHub 設定面板：點擊畫面右上角設定工具列中的 GitHub 標籤（或圖示）。
+
+[1] (https://aistudio.google.com/learn/sync-your-ai-studio-apps-with-github)
+
+3.連結儲存庫（Repository）：
+
+首次使用 / 建立新庫：點擊連結按鈕登入並授權您的 GitHub 帳戶，輸入儲存庫名稱並選擇公開/私有，即可建立新儲存庫。
+
+連結既有庫：您也可以選擇綁定現有的 GitHub 儲存庫。
+
+[1] (https://www.youtube.com/watch?v=4fM4ag3yHaM)
+
+4.雙向同步操作：
+
+推送變更（Push Changes）：當您在 AI Studio 透過對話提示詞（Prompt）修改、迭代了應用程式後，點擊此按鈕即可將 AI 生成的程式碼變更推送到 GitHub（Gemini 還會自動幫您分析檔案差異並生成結構化的 Commit 訊息）。
+
+拉取變更（Pull Changes）：如果您在本地端 IDE（如 VS Code、Cursor）或其他地方對 GitHub 儲存庫進行了程式碼修改，可以直接點擊此按鈕將更新拉回 AI Studio 繼續進行視覺化開發。
+
+ 
